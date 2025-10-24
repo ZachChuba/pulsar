@@ -418,10 +418,10 @@
                     <exclude>org.apache.avro.reflect.Union</exclude>
                   </excludes>
                 </relocation>
-                <relocation>
-                  <pattern>org.apache.bookkeeper</pattern>
-                  <shadedPattern>org.apache.pulsar.shade.org.apache.bookkeeper</shadedPattern>
-                </relocation>
+<!--                <relocation>-->
+<!--                  <pattern>org.apache.bookkeeper</pattern>-->
+<!--                  <shadedPattern>org.apache.pulsar.shade.org.apache.bookkeeper</shadedPattern>-->
+<!--                </relocation>-->
                 <relocation>
                   <pattern>org.apache.commons</pattern>
                   <shadedPattern>org.apache.pulsar.shade.org.apache.commons</shadedPattern>
