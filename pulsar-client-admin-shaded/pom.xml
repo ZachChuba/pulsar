@@ -52,6 +52,10 @@
       <version>${project.parent.version}</version>
       <optional>true</optional>
     </dependency>
+    <dependency>
+      <groupId>org.apache.bookkeeper</groupId>
+      <artifactId>bookkeeper-server</artifactId>
+    </dependency>
   </dependencies>
   <build>
     <plugins>
@@ -128,7 +132,6 @@
                   <include>com.yahoo.datasketches:sketches-core</include>
                   <include>commons-*:*</include>
                   <include>commons-codec:commons-codec</include>
-                  <include>commons-collections:commons-collections</include>
                   <include>io.airlift:*</include>
                   <include>io.grpc:*</include>
                   <include>io.netty.incubator:*</include>
@@ -143,7 +146,6 @@
                   <include>javax.ws.rs:*</include>
                   <include>javax.xml.bind:jaxb-api</include>
                   <include>net.jcip:jcip-annotations</include>
-                  <include>org.apache.bookkeeper:*</include>
                   <include>org.apache.commons:commons-compress</include>
                   <include>org.apache.commons:commons-lang3</include>
                   <include>org.apache.pulsar:pulsar-client-admin-original</include>
@@ -352,10 +354,10 @@
                   <pattern>org.aopalliance</pattern>
                   <shadedPattern>org.apache.pulsar.shade.org.aopalliance</shadedPattern>
                 </relocation>
-                <relocation>
-                  <pattern>org.apache.bookkeeper</pattern>
-                  <shadedPattern>org.apache.pulsar.shade.org.apache.bookkeeper</shadedPattern>
-                </relocation>
+<!--                <relocation>-->
+<!--                  <pattern>org.apache.bookkeeper</pattern>-->
+<!--                  <shadedPattern>org.apache.pulsar.shade.org.apache.bookkeeper</shadedPattern>-->
+<!--                </relocation>-->
                 <relocation>
                   <pattern>org.apache.commons</pattern>
                   <shadedPattern>org.apache.pulsar.shade.org.apache.commons</shadedPattern>
